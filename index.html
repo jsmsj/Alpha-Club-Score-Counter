@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Alpha Club</title>
+    <link rel="stylesheet" href="./css/stylesheet.css" >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.8.8/brython.js" integrity="sha256-rA89wPrTJJQFWJaZveKW8jpdmC3t5F9rRkPyBjz8G04=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.8.8/brython_stdlib.js" integrity="sha256-Gnrw9tIjrsXcZSCh/wos5Jrpn0bNVNFJuNJI9d71TDs=" crossorigin="anonymous"></script>
+</head>
+<body onload="brython()">
+    <div class="container">
+        <header class="header top-heading">
+            Alpha Club
+        </header>
+        <section class="top">
+            <div class="house">
+                <div class="house-section">
+                    <div class="points-view">
+                        <span id="points-1">0</span>
+                    </div>
+                    <div class="toolbar">
+                        <input type="text" placeholder="Enter Points" id="inp-points-1">
+                        <button id="add-point-btn-1">+</button>
+                        <button id="remove-point-btn-1">-</button>
+                        <button id="clear-point-btn-1">Clear Points</button>
+                    </div>                    
+                </div>
+            </div>
+            <div class="house">
+                <div class="house-section">
+                    <div class="points-view">
+                        <span id="points-2">0</span>
+                    </div>
+                    <div class="toolbar">
+                        <input type="text" placeholder="Enter Points" id="inp-points-2">
+                        <button id="add-point-btn-2">+</button>
+                        <button id="remove-point-btn-2">-</button>
+                        <button id="clear-point-btn-2">Clear Points</button>
+                    </div>                
+                </div>
+            </div>
+        </section>
+        <section class="bottom">
+            <div class="house">
+                <div class="house-section">
+                    <div class="points-view">
+                        <span id="points-3">0</span>
+                    </div>
+                    <div class="toolbar">
+                        <input type="text" placeholder="Enter Points" id="inp-points-3">
+                        <button id="add-point-btn-3">+</button>
+                        <button id="remove-point-btn-3">-</button>
+                        <button id="clear-point-btn-3">Clear Points</button>
+                    </div>               
+                </div>
+            </div>
+            <div class="house">
+                <div class="house-section">
+                    <div class="points-view">
+                        <span id="points-4">0</span>
+                    </div>
+                    <div class="toolbar">
+                        <input type="text" placeholder="Enter Points" id="inp-points-4">
+                        <button id="add-point-btn-4">+</button>
+                        <button id="remove-point-btn-4">-</button>
+                        <button id="clear-point-btn-4">Clear Points</button>
+                    </div>               
+                </div>
+            </div>
+        </section>
+        <footer>
+            Developed by jsmsj#5252
+        </footer>
+    </div>
+    <script type="text/python" id="script1" >
+        from browser import document,console,window
+
+        storage = window.localStorage
+
+        if storage.getItem('points-1'):
+            document['points-1'].textContent = storage.getItem('points-1')
+
+        def increment(ef):
+            current_points = int(document['points-1'].text)
+            input_value = int(document['inp-points-1'].value)
+
+            #console.log(current_points)
+            #console.log(input_value)
+            current_points+=input_value
+            #console.log(current_points)
+
+            document['points-1'].textContent = current_points
+            storage.setItem('points-1',current_points)
+
+        def decrement(ef):
+            current_points = int(document['points-1'].text)
+            input_value = int(document['inp-points-1'].value)
+            current_points-=input_value
+            document['points-1'].textContent = current_points
+            storage.setItem('points-1',current_points)
+
+        def clear(ef):
+            storage.removeItem('points-1')
+            document['points-1'].text = 0
+
+
+        document['add-point-btn-1'].bind('click',increment)
+        document['remove-point-btn-1'].bind('click',decrement)
+        document['clear-point-btn-1'].bind('click',clear)
+    </script>
+    <script type="text/python" id="script2" >
+        from browser import document,console,window
+    
+        storage = window.localStorage
+    
+        if storage.getItem('points-2'):
+            document['points-2'].textContent = storage.getItem('points-2')
+    
+        def increment(ef):
+            current_points = int(document['points-2'].text)
+            input_value = int(document['inp-points-2'].value)
+    
+            #console.log(current_points)
+            #console.log(input_value)
+            current_points+=input_value
+            #console.log(current_points)
+    
+            document['points-2'].textContent = current_points
+            storage.setItem('points-2',current_points)
+    
+        def decrement(ef):
+            current_points = int(document['points-2'].text)
+            input_value = int(document['inp-points-2'].value)
+            current_points-=input_value
+            document['points-2'].textContent = current_points
+            storage.setItem('points-2',current_points)
+    
+        def clear(ef):
+            storage.removeItem('points-2')
+            document['points-2'].text = 0
+    
+    
+        document['add-point-btn-2'].bind('click',increment)
+        document['remove-point-btn-2'].bind('click',decrement)
+        document['clear-point-btn-2'].bind('click',clear)
+    </script>
+    <script type="text/python" id="script3" >
+        from browser import document,console,window
+    
+        storage = window.localStorage
+    
+        if storage.getItem('points-3'):
+            document['points-3'].textContent = storage.getItem('points-3')
+    
+        def increment(ef):
+            current_points = int(document['points-3'].text)
+            input_value = int(document['inp-points-3'].value)
+    
+            #console.log(current_points)
+            #console.log(input_value)
+            current_points+=input_value
+            #console.log(current_points)
+    
+            document['points-3'].textContent = current_points
+            storage.setItem('points-3',current_points)
+    
+        def decrement(ef):
+            current_points = int(document['points-3'].text)
+            input_value = int(document['inp-points-3'].value)
+            current_points-=input_value
+            document['points-3'].textContent = current_points
+            storage.setItem('points-3',current_points)
+    
+        def clear(ef):
+            storage.removeItem('points-3')
+            document['points-3'].text = 0
+    
+    
+        document['add-point-btn-3'].bind('click',increment)
+        document['remove-point-btn-3'].bind('click',decrement)
+        document['clear-point-btn-3'].bind('click',clear)
+    </script>
+    <script type="text/python" id="script4" >
+        from browser import document,console,window
+    
+        storage = window.localStorage
+    
+        if storage.getItem('points-4'):
+            document['points-4'].textContent = storage.getItem('points-4')
+    
+        def increment(ef):
+            current_points = int(document['points-4'].text)
+            input_value = int(document['inp-points-4'].value)
+    
+            #console.log(current_points)
+            #console.log(input_value)
+            current_points+=input_value
+            #console.log(current_points)
+    
+            document['points-4'].textContent = current_points
+            storage.setItem('points-4',current_points)
+    
+        def decrement(ef):
+            current_points = int(document['points-4'].text)
+            input_value = int(document['inp-points-4'].value)
+            current_points-=input_value
+            document['points-4'].textContent = current_points
+            storage.setItem('points-4',current_points)
+    
+        def clear(ef):
+            storage.removeItem('points-4')
+            document['points-4'].text = 0
+    
+    
+        document['add-point-btn-4'].bind('click',increment)
+        document['remove-point-btn-4'].bind('click',decrement)
+        document['clear-point-btn-4'].bind('click',clear)
+    </script>
+</body>
+</html>
