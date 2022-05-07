@@ -12,16 +12,28 @@ html{
 
 body{
     font-family: 'Montserrat',sans-serif;
+    background: #00008f;
+    background: -webkit-linear-gradient(63deg, #00008f 0%, #8f00e2 100%);
+    background: linear-gradient(63deg, #00008f 0%, #8f00e2 100%); 
 }
 
 
 .house{
     float:left;
     width:50%;
-    /* border:1px solid red; */
+    border:1px solid red;
     padding:0.5em 1.5em;
-    height:44vh;
+    height:43.5vh;
+    position: relative;
+    margin-bottom: 0.5em;
 }
+
+.house-section{
+    position: absolute;
+    bottom: 0;
+    width:100%;
+}
+
 
 .top::after{
     content:'';
@@ -35,6 +47,7 @@ body{
 }
 
 .container{
+    text-align:center;
     max-width:1600px;
     width:95%;
     margin: 0 auto;
@@ -42,6 +55,12 @@ body{
 
 .header{
     height:10vh;
+}
+
+.footer{
+    padding-top:0.25rem;
+    /* height:3vh; */
+    background: #fff;
 }
 
 /* utility */
@@ -62,3 +81,57 @@ body{
 }
 
 
+.btn{
+    background-color: #222;
+    border-radius: 4px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+    max-width: none;
+    min-height: 44px;
+    min-width: 10px;
+    outline: none;
+    overflow: hidden;
+    padding: 9px 20px 8px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+}
+
+.btn-clear{
+    background-color:rgb(126, 5, 5);
+}
+
+.btn:hover{
+opacity: .75;
+}
+
+.points-input-box{
+    padding: 0.5em;
+    text-align: center;
+    margin:0.5rem;
+}
+
+.points-view{
+    text-align: center;
+}
+
+.graph-1{
+    border:2px solid black;
+    width:10%;
+    margin: 0.6em auto;
+    max-height: 40rem;
+    height:95%;
+
+}
