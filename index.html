@@ -10,6 +10,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.8.8/brython_stdlib.js" integrity="sha256-Gnrw9tIjrsXcZSCh/wos5Jrpn0bNVNFJuNJI9d71TDs=" crossorigin="anonymous"></script>
 </head>
 <body onload="brython()">
+    <div id="particles-js">
+    </div>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
     <div class="container">
         <header class="header top-heading">
             Alpha Club
@@ -18,28 +22,31 @@
             <div class="house">
                 <div class="house-section">
                     <div class="points-view">
-                        <div class="graph" id="bar-1"></div>
-                        <span id="points-1">0</span>
+                        <span class="points-text" id="points-1">0</span>
+                        <div class="graph green" id="bar-1"></div>
                     </div>
                     <div class="toolbar">
                         <input type="text" placeholder="Enter Points" class="points-input-box" id="inp-points-1"> <br>
                         <button class="btn" id="add-point-btn-1">+</button>
                         <button class="btn" id="remove-point-btn-1">-</button>
                         <button class="btn btn-clear" id="clear-point-btn-1">Clear Points</button>
+                        <p class="house-name">Prakriti</p>
                     </div>                    
                 </div>
             </div>
             <div class="house">
                 <div class="house-section">
                     <div class="points-view">
-                        <div class="graph" id="bar-2"></div>
-                        <span id="points-2">0</span>
+                        <span class="points-text" id="points-2">0</span>
+                        <div class="graph yellow" id="bar-2"></div>
                     </div>
                     <div class="toolbar">
                         <input type="text" placeholder="Enter Points" class="points-input-box" id="inp-points-2"> <br>
                         <button class="btn" id="add-point-btn-2">+</button>
                         <button class="btn" id="remove-point-btn-2">-</button>
                         <button class="btn btn-clear" id="clear-point-btn-2">Clear Points</button>
+                        <p class="house-name">Prakash</p>
+
                     </div>                
                 </div>
             </div>
@@ -48,36 +55,42 @@
             <div class="house">
                 <div class="house-section">
                     <div class="points-view">
-                        <div class="graph" id="bar-3"></div>
-                        <span id="points-3">0</span>
+                        <span class="points-text" id="points-3">0</span>
+                        <div class="graph red" id="bar-3"></div>
                     </div>
                     <div class="toolbar">
                         <input type="text" placeholder="Enter Points" class="points-input-box" id="inp-points-3"> <br>
                         <button class="btn" id="add-point-btn-3">+</button>
                         <button class="btn" id="remove-point-btn-3">-</button>
                         <button class="btn btn-clear" id="clear-point-btn-3">Clear Points</button>
+                        <p class="house-name">Pratigya</p>
+
                     </div>               
                 </div>
             </div>
             <div class="house">
                 <div class="house-section">
                     <div class="points-view">
-                        <div class="graph" id="bar-4"></div>
-                        <span id="points-4">0</span>
+                        <span class="points-text" id="points-4">0</span>
+                        <div class="graph blue" id="bar-4"></div>
                     </div>
                     <div class="toolbar">
                         <input type="text" placeholder="Enter Points" class="points-input-box" id="inp-points-4"> <br>
                         <button class="btn" id="add-point-btn-4">+</button>
                         <button class="btn" id="remove-point-btn-4">-</button>
                         <button class="btn btn-clear" id="clear-point-btn-4">Clear Points</button>
+                        <p class="house-name">Prayas</p>
+
                     </div>               
                 </div>
             </div>
         </section>
     </div>
-    <footer class="footer">
-        Developed by jsmsj#5252
-    </footer>
+    <div class="footer-wrapper">
+        <footer class="footer">
+            Developed by jsmsj#5252
+        </footer>
+    </div>
     <script type="text/python" id="script0">
         from browser import document
         def give_height(id):
@@ -87,7 +100,15 @@
                 int(document['points-3'].text),
                 int(document['points-4'].text)
             ]
-            height = (int(document[id].text)/max(list_of_points))*21
+            try:
+                height = (int(document[id].text)/max(list_of_points))*18.8
+            except:
+                height = 0
+
+            if height<0:
+                height = 0
+
+
             return height
     </script>
     <script type="text/python" id="script1" >
