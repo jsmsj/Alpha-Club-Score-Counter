@@ -61,6 +61,7 @@ body{
     padding-top:0.25rem;
     /* height:3vh; */
     background: #fff;
+    text-align: center;
 }
 
 /* utility */
@@ -127,11 +128,9 @@ opacity: .75;
     text-align: center;
 }
 
-.graph-1{
+.graph{
     border:2px solid black;
-    width:10%;
+    background-color:white;
+    width:60px;
     margin: 0.6em auto;
-    max-height: 40rem;
-    height:95%;
-
 }
