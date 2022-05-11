@@ -168,6 +168,7 @@ opacity: .75;
     /* border:2px solid black; */
     width:60px;
     margin: 0.6em auto;
+    /* height:18vh; */
 }
 
 .points-text{
@@ -260,6 +261,14 @@ opacity: .75;
 }
 
 
+.helper-height{
+    position: absolute;
+    height:18vh;
+    top:0;
+}
+
+
+
 /* 320px — 480px: Mobile devices
 481px — 768px: iPads, Tablets
 769px — 1024px: Small screens, laptops
@@ -322,6 +331,9 @@ opacity: .75;
     .btn{
         height:38px;
     }
+    .helper-height{
+        height:14.5vh;
+    }
 }
 
 @media only screen and (min-width: 525px) and (max-width: 570px) {
@@ -343,6 +355,9 @@ opacity: .75;
     }
     .btn{
         height:38px;
+    }
+    .helper-height{
+        height:14vh;
     }
 }
 
@@ -367,6 +382,9 @@ opacity: .75;
     .btn{
         height:38px;
     }
+    .helper-height{
+        height:14.5vh;
+    }
 }
 
 @media only screen and (min-width: 440px) and (max-width: 480px) {
@@ -384,6 +402,9 @@ opacity: .75;
     }
     .btn{
         height:38px;
+    }
+    .helper-height{
+        height:14.5vh;
     }
 }
 
@@ -408,6 +429,9 @@ opacity: .75;
     }
     .btn{
         height:38px;
+    }
+    .helper-height{
+        height:14.5vh;
     }
 }
 
@@ -434,6 +458,9 @@ opacity: .75;
     .btn{
         height:38px;
     }
+    .helper-height{
+        height:14.5vh;
+    }
 }
 
 @media only screen and (max-width: 366px) {
@@ -458,5 +485,8 @@ opacity: .75;
     }
     .btn{
         height:38px;
+    }
+    .helper-height{
+        height:14.5vh;
     }
 }

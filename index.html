@@ -105,6 +105,7 @@
             Developed by jsmsj#5252
         </footer>
     </div>
+    <div class="helper-height" id="height-helper"></div>
     <script type="text/python" id="script0">
         from browser import document
         def give_height(id):
@@ -115,7 +116,8 @@
                 int(document['points-4'].text)
             ]
             try:
-                height = (int(document[id].text)/max(list_of_points))*18
+                max_ht = (int(document['height-helper'].height))/(int(document.documentElement.clientHeight))*100
+                height = (int(document[id].text)/max(list_of_points))*max_ht
             except:
                 height = 0
 
