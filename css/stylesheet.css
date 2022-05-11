@@ -37,6 +37,9 @@ body{
     position: absolute;
     bottom: 0;
     width:100%;
+    max-height:39vh;
+    max-width:45vw;
+    overflow:auto;
 }
 
 
@@ -125,12 +128,11 @@ body{
     cursor: pointer;
     display: inline-block;
     font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 700;
     line-height: 1.5;
-    margin: 0 0.25em;
+    margin: 0.125em 0.25em;
     max-width: none;
-    min-height: 44px;
     min-width: 10px;
     outline: none;
     overflow: hidden;
@@ -256,3 +258,180 @@ opacity: .75;
     font-size:7rem;
     padding-left: 0.5em;
 }
+
+
+/* 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV */
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+	.header .text{
+        font-size:6rem;
+    }
+    .house-name{
+        font-size:3rem;
+    }
+    .points-text{
+        font-size:2.5rem;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .header .text{
+        font-size:4.5rem;
+    }
+    .house-name{
+        font-size:3rem;
+    }
+    .points-text{
+        font-size:2.5rem;
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 768px) {
+    .header .text{
+        font-size:3.5rem;
+    }
+    .house-name{
+        font-size:3rem;
+    }
+    .points-text{
+        font-size:2.5rem;
+    }
+}
+
+@media only screen and (min-width: 571px) and (max-width: 699px) {
+    .header .text{
+        font-size:3rem;
+    }
+
+    .house{
+        width:49%;
+    }
+    .house-section{
+        padding:0;
+    }
+    .house-name{
+        font-size:3rem;
+    }
+    .points-text{
+        font-size:2.5rem;
+    }
+    .btn{
+        height:38px;
+    }
+}
+
+@media only screen and (min-width: 525px) and (max-width: 570px) {
+    .header .text{
+        font-size:2.5rem;
+    }
+
+    .house{
+        width:49%;
+    }
+    .house-section{
+        padding:0;
+    }
+    .house-name{
+        font-size:3rem;
+    }
+    .points-text{
+        font-size:2.5rem;
+    }
+    .btn{
+        height:38px;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 524px) {
+    .header .text{
+        font-size:2rem;
+    }
+
+    .house{
+        width:48%;
+    }
+    .house-section{
+        padding:0;
+        max-width:40vw;
+    }
+    .house-name{
+        font-size:2.5rem;
+    }
+    .points-text{
+        font-size:2rem;
+    }
+    .btn{
+        height:38px;
+    }
+}
+
+@media only screen and (min-width: 440px) and (max-width: 480px) {
+    .header .text{
+        font-size:2rem;
+    }
+
+    .house{
+        width:100%;
+        margin-top:0.5em;
+    }
+    .house-section{
+        padding:0;
+        max-width:89vw;
+    }
+    .btn{
+        height:38px;
+    }
+}
+
+@media only screen and (min-width: 399px) and (max-width: 439px) {
+    .header .text{
+        font-size:2rem;
+    }
+
+    .house{
+        width:100%;
+        margin-top:0.5em;
+    }
+    .house-section{
+        padding:0;
+        max-width:89vw;
+    }
+    .header .image img{
+        height:10vh;
+    }
+    .header{
+        height:10.5vh;
+    }
+    .btn{
+        height:38px;
+    }
+}
+
+@media only screen and (max-width: 398px) {
+    .header .text{
+        font-size:3.5rem;
+    }
+
+    .house{
+        width:100%;
+        margin-top:0.5em;
+    }
+    .house-section{
+        padding:0;
+        max-width:89vw;
+    }
+    .header .image img{
+        height:0vh;
+    }
+    .header{
+        height:10.5vh;
+    }
+    .btn{
+        height:38px;
+    }
+}
+
