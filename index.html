@@ -14,7 +14,7 @@
     </div>
     <script src="particles.js"></script>
     <script src="app.js"></script>
-    <header class="header top-heading">
+    <!-- <header class="header top-heading">
         <div class="container">
             <div class="nav-head">
                 <span class="img-helper"></span><img src="./assets/logo.png" alt="Alpha Club" class="logo">
@@ -23,7 +23,14 @@
                 <span class="top-text">Club Day Score Counter</span>
             </div>
         </div>
+    </header> -->
+
+    <header class="header">
+        <div class="image"><img src="./assets/logo.png" alt="Alpha Club"></div>
+        <div class="text">Club Day Score Counter</div>
     </header>
+
+
     <div class="container">
         <section class="top">
             <div class="house">
@@ -361,6 +368,17 @@
         document['add-point-btn-4'].bind('click',increment)
         document['remove-point-btn-4'].bind('click',decrement)
         document['clear-point-btn-4'].bind('click',clear)
+    </script>
+    <script type="text/python" id="script5">
+        from browser import document
+        from script0 import give_height
+
+        bar1,bar2,bar3,bar4 = document["bar-1"],document["bar-2"],document["bar-3"],document["bar-4"]
+        bar1.style.height = str(give_height('points-1')) + "vh"
+        bar2.style.height = str(give_height('points-2')) + "vh"
+        bar3.style.height = str(give_height('points-3')) + "vh"
+        bar4.style.height = str(give_height('points-4')) + "vh"
+
     </script>
 </body>
 </html>
