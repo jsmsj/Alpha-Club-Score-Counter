@@ -241,6 +241,10 @@ opacity: .75;
     height:13vh;
 }
 
+.header .image-2 img{
+    height:5vh;
+}
+
 .header .text{
     font-family:'Comfortaa',sans-serif;
     font-weight:600;
@@ -250,6 +254,7 @@ opacity: .75;
 }
 
 .header .image, 
+.header .image-2,
 .header .text {
     display: inline-block;
     vertical-align: middle;
@@ -481,7 +486,7 @@ opacity: .75;
         height:10.5vh;
     }
     .header{
-        height:20vh;
+        height:17vh;
     }
     .btn{
         height:38px;
